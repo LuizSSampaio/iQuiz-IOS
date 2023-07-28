@@ -25,7 +25,6 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCR-dg-mDI"/>
                                     <segue destination="TN4-YW-68T" kind="show" id="JFZ-G5-DRC"/>
                                 </connections>
                             </button>
@@ -46,9 +45,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bpt-HC-8rI"/>
-                    <connections>
-                        <outlet property="startButton" destination="2lD-96-yyD" id="9ld-OB-dN3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,11 +57,78 @@
                     <view key="view" contentMode="scaleToFill" id="2CV-66-rBM">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHA-Jf-g8f">
+                                <rect key="frame" x="64" y="330" width="302" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="iac-YD-Ct0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Answer 1">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="responseButtonPressed:" destination="TN4-YW-68T" eventType="touchUpInside" id="RKa-j1-m1V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQk-th-nwN">
+                                <rect key="frame" x="64" y="424" width="302" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="7Jb-mr-uHA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Answer 2">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="responseButtonPressed:" destination="TN4-YW-68T" eventType="touchUpInside" id="jK2-b2-lrV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcq-Qh-WRp">
+                                <rect key="frame" x="64" y="518" width="302" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="vdv-cS-TrN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Answer 3">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="responseButtonPressed:" destination="TN4-YW-68T" eventType="touchUpInside" id="LFt-HI-rPm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWh-8H-wnG">
+                                <rect key="frame" x="64" y="215" width="302" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NYC-sz-mVV"/>
                         <color key="backgroundColor" red="0.32156862745098036" green="0.11764705882352941" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.45490196078431372" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xHA-Jf-g8f" firstAttribute="leading" secondItem="NYC-sz-mVV" secondAttribute="leading" constant="64" id="38W-Bc-PSS"/>
+                            <constraint firstItem="xHA-Jf-g8f" firstAttribute="centerX" secondItem="2CV-66-rBM" secondAttribute="centerX" id="5Jm-uc-8lE"/>
+                            <constraint firstItem="NYC-sz-mVV" firstAttribute="trailing" secondItem="sQk-th-nwN" secondAttribute="trailing" constant="64" id="7B1-Kv-glh"/>
+                            <constraint firstItem="IWh-8H-wnG" firstAttribute="centerX" secondItem="2CV-66-rBM" secondAttribute="centerX" id="9fB-zV-2Fw"/>
+                            <constraint firstItem="IWh-8H-wnG" firstAttribute="centerX" secondItem="2CV-66-rBM" secondAttribute="centerX" id="FGI-M1-4pl"/>
+                            <constraint firstItem="Jcq-Qh-WRp" firstAttribute="top" secondItem="sQk-th-nwN" secondAttribute="bottom" constant="32" id="JgH-4I-8vr"/>
+                            <constraint firstItem="IWh-8H-wnG" firstAttribute="leading" secondItem="NYC-sz-mVV" secondAttribute="leading" constant="64" id="OSE-dn-AXY"/>
+                            <constraint firstItem="xHA-Jf-g8f" firstAttribute="top" secondItem="IWh-8H-wnG" secondAttribute="bottom" constant="72" id="Olh-c2-NUR"/>
+                            <constraint firstItem="sQk-th-nwN" firstAttribute="leading" secondItem="NYC-sz-mVV" secondAttribute="leading" constant="64" id="Qo1-yN-BW8"/>
+                            <constraint firstItem="NYC-sz-mVV" firstAttribute="trailing" secondItem="IWh-8H-wnG" secondAttribute="trailing" constant="64" id="gns-Fp-T9T"/>
+                            <constraint firstItem="Jcq-Qh-WRp" firstAttribute="leading" secondItem="NYC-sz-mVV" secondAttribute="leading" constant="64" id="jb5-WK-WP2"/>
+                            <constraint firstItem="NYC-sz-mVV" firstAttribute="trailing" secondItem="xHA-Jf-g8f" secondAttribute="trailing" constant="64" id="lfx-dW-A7V"/>
+                            <constraint firstItem="sQk-th-nwN" firstAttribute="top" secondItem="xHA-Jf-g8f" secondAttribute="bottom" constant="32" id="mYf-fv-hQN"/>
+                            <constraint firstItem="NYC-sz-mVV" firstAttribute="trailing" secondItem="Jcq-Qh-WRp" secondAttribute="trailing" constant="64" id="y5j-mW-Jic"/>
+                            <constraint firstItem="IWh-8H-wnG" firstAttribute="top" secondItem="NYC-sz-mVV" secondAttribute="top" constant="112" id="zS9-bS-ch7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NY7-P2-loe"/>
+                    <connections>
+                        <outlet property="questionTitleLabel" destination="IWh-8H-wnG" id="JG2-gg-aWg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZq-Xm-j3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
