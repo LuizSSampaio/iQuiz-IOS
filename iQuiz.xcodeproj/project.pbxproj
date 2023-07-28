@@ -15,6 +15,7 @@
 		25BAD7842A74412F001FAC40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BAD7822A74412F001FAC40 /* LaunchScreen.storyboard */; };
 		25BAD78E2A745346001FAC40 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BAD78D2A745346001FAC40 /* QuestionViewController.swift */; };
 		25BAD7902A746FC2001FAC40 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BAD78F2A746FC2001FAC40 /* Question.swift */; };
+		25BAD7922A747B25001FAC40 /* PerformaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BAD7912A747B25001FAC40 /* PerformaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		25BAD7852A74412F001FAC40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25BAD78D2A745346001FAC40 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		25BAD78F2A746FC2001FAC40 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		25BAD7912A747B25001FAC40 /* PerformaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,34 @@
 		25BAD7762A74412A001FAC40 /* iQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				25BAD7942A748675001FAC40 /* Model */,
+				25BAD7932A74864B001FAC40 /* ViewController */,
 				25BAD7772A74412A001FAC40 /* AppDelegate.swift */,
 				25BAD7792A74412A001FAC40 /* SceneDelegate.swift */,
-				25BAD77B2A74412A001FAC40 /* ViewController.swift */,
 				25BAD77D2A74412A001FAC40 /* Main.storyboard */,
 				25BAD7802A74412F001FAC40 /* Assets.xcassets */,
 				25BAD7822A74412F001FAC40 /* LaunchScreen.storyboard */,
 				25BAD7852A74412F001FAC40 /* Info.plist */,
-				25BAD78D2A745346001FAC40 /* QuestionViewController.swift */,
-				25BAD78F2A746FC2001FAC40 /* Question.swift */,
 			);
 			path = iQuiz;
+			sourceTree = "<group>";
+		};
+		25BAD7932A74864B001FAC40 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				25BAD77B2A74412A001FAC40 /* ViewController.swift */,
+				25BAD78D2A745346001FAC40 /* QuestionViewController.swift */,
+				25BAD7912A747B25001FAC40 /* PerformaceViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		25BAD7942A748675001FAC40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25BAD78F2A746FC2001FAC40 /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +167,7 @@
 				25BAD77C2A74412A001FAC40 /* ViewController.swift in Sources */,
 				25BAD7782A74412A001FAC40 /* AppDelegate.swift in Sources */,
 				25BAD78E2A745346001FAC40 /* QuestionViewController.swift in Sources */,
+				25BAD7922A747B25001FAC40 /* PerformaceViewController.swift in Sources */,
 				25BAD77A2A74412A001FAC40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

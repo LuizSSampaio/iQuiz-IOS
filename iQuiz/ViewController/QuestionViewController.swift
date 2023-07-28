@@ -15,20 +15,26 @@ class QuestionViewController: UIViewController {
     @IBOutlet var responseButtons: [UIButton]!
     
     @IBAction func responseButtonPressed(_ sender: UIButton) {
-        print(sender.tag)
         if sender.tag == questions[questionNumber].correctAnswer {
-            print("Correct answer")
             sender.tintColor = UIColor(red: 11/255, green: 161/255, blue: 53/255, alpha: 1)
             score += 1
         } else {
-            print("Wrong answer")
             sender.tintColor = UIColor(red: 211/255, green: 17/255, blue: 17/255, alpha: 1)
         }
         
         if questionNumber + 1 < questions.count {
             questionNumber += 1
             Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(configureQuestion), userInfo: nil, repeats: false)
+        } else {
+            performSegue(withIdentifier: "goToPerformaceScreen", sender: nil)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let performaceVC = segue.destination as?  PerformaceViewController else {
+            return
+        }
+        performaceVC.score = self.score
     }
     
     override func viewDidLoad() {

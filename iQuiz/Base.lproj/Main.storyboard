@@ -131,11 +131,80 @@
                         <outletCollection property="responseButtons" destination="xHA-Jf-g8f" collectionClass="NSMutableArray" id="9oj-Fi-ppt"/>
                         <outletCollection property="responseButtons" destination="sQk-th-nwN" collectionClass="NSMutableArray" id="Jv4-Vr-rDy"/>
                         <outletCollection property="responseButtons" destination="Jcq-Qh-WRp" collectionClass="NSMutableArray" id="qoE-B4-OZE"/>
+                        <segue destination="cwu-Va-pMk" kind="show" identifier="goToPerformaceScreen" id="FHd-Rp-EPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZq-Xm-j3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2147.4418604651164" y="-28.326180257510732"/>
+            <point key="canvasLocation" x="1993" y="-28"/>
+        </scene>
+        <!--Performace View Controller-->
+        <scene sceneID="z9V-tb-2Kc">
+            <objects>
+                <viewController id="cwu-Va-pMk" customClass="PerformaceViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vzK-Uc-PfX">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have completed iQuiz!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zO3-oH-Gu1">
+                                <rect key="frame" x="64" y="215" width="302" height="86"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsom Dolor Amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-Gp-rLS">
+                                <rect key="frame" x="64" y="373" width="302" height="76.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final percentage: 20%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFv-wV-Xk6">
+                                <rect key="frame" x="64" y="521.66666666666663" width="302" height="76.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7i-hS-dny">
+                                <rect key="frame" x="64" y="670.33333333333337" width="302" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="E20-kn-iBK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restart Quiz">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="oid-jp-vo0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M4C-DO-Ilo"/>
+                        <color key="backgroundColor" red="0.32156862745098036" green="0.11764705882352941" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.45490196078431372" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HFv-wV-Xk6" firstAttribute="leading" secondItem="M4C-DO-Ilo" secondAttribute="leading" constant="64" id="1qL-zl-UIQ"/>
+                            <constraint firstItem="vBJ-Gp-rLS" firstAttribute="top" secondItem="zO3-oH-Gu1" secondAttribute="bottom" constant="72" id="6Dn-7e-5Pb"/>
+                            <constraint firstItem="zO3-oH-Gu1" firstAttribute="top" secondItem="M4C-DO-Ilo" secondAttribute="top" constant="112" id="JMx-AG-2U4"/>
+                            <constraint firstItem="M4C-DO-Ilo" firstAttribute="trailing" secondItem="vBJ-Gp-rLS" secondAttribute="trailing" constant="64" id="JNv-bE-Ngh"/>
+                            <constraint firstItem="vBJ-Gp-rLS" firstAttribute="leading" secondItem="M4C-DO-Ilo" secondAttribute="leading" constant="64" id="Jd9-BC-OBd"/>
+                            <constraint firstItem="M4C-DO-Ilo" firstAttribute="trailing" secondItem="C7i-hS-dny" secondAttribute="trailing" constant="64" id="ORN-9m-kfb"/>
+                            <constraint firstItem="M4C-DO-Ilo" firstAttribute="trailing" secondItem="HFv-wV-Xk6" secondAttribute="trailing" constant="64" id="hGV-Rt-ATU"/>
+                            <constraint firstItem="C7i-hS-dny" firstAttribute="top" secondItem="HFv-wV-Xk6" secondAttribute="bottom" constant="72" id="kOR-Rj-wX0"/>
+                            <constraint firstItem="M4C-DO-Ilo" firstAttribute="trailing" secondItem="zO3-oH-Gu1" secondAttribute="trailing" constant="64" id="nVF-Ty-kpe"/>
+                            <constraint firstItem="zO3-oH-Gu1" firstAttribute="leading" secondItem="M4C-DO-Ilo" secondAttribute="leading" constant="64" id="paM-pC-EMa"/>
+                            <constraint firstItem="HFv-wV-Xk6" firstAttribute="top" secondItem="vBJ-Gp-rLS" secondAttribute="bottom" constant="72" id="qiY-GV-Qk0"/>
+                            <constraint firstItem="C7i-hS-dny" firstAttribute="leading" secondItem="M4C-DO-Ilo" secondAttribute="leading" constant="64" id="s9a-yF-BF8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YBk-xh-Mko"/>
+                    <connections>
+                        <outlet property="numberOfCorrectAnswersLabel" destination="vBJ-Gp-rLS" id="id5-6l-kJe"/>
+                        <outlet property="percentOfCorrectAnswersLabel" destination="HFv-wV-Xk6" id="n9W-sZ-Bs7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Np-AL-QeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974.8837209302324" y="-28.326180257510732"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Owr-SP-RZz">
@@ -156,6 +225,9 @@
             <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xq5-J8-2I8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="217" height="104"/>
     </resources>
